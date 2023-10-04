@@ -125,6 +125,22 @@ body.fixed {
   line-height: normal;
   border: none;
 }
+.button.small-arrow {
+  padding: 20px 35px;
+  position: relative;
+  z-index: 1;
+}
+.button.small-arrow::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 22px;
+  background: url("/public/images/btn-arrow.svg") no-repeat center;
+  background-size: cover;
+}
 .button.green {
   background: #42B358;
   border-radius: 16px;
@@ -915,17 +931,20 @@ img {
   font-weight: 600;
 }
 #form .form-row {
-  margin: 15px 0;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
 }
-#form .form-row input {
+#form .form-row:nth-child(7) {
+  margin-top: 45px;
+}
+#form .form-row .input {
   appearance: none;
   border-radius: 16px;
   border: 2px solid #C2C7CF;
   padding: 12px;
 }
-#form .form-row input:focus {
+#form .form-row .input:focus {
   outline: none;
   border: 2px solid #42B358;
 }
@@ -941,14 +960,67 @@ img {
   padding: 20px 7px 23px 12px;
 }
 #form .form-row .condition .row-item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#form .form-row .condition .row-item:first-child {
+  margin-bottom: 16px;
 }
 #form .form-row .condition .row-item .item {
+  display: block;
+  position: relative;
   font-size: 14px;
   font-weight: 500;
   color: #515151;
+  padding-left: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#form .form-row .condition .row-item .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("/public/images/conditions.svg") no-repeat;
+  background-size: cover;
+}
+#form .form-row .condition .row-item .item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#form .form-row .condition .row-item .item .checkmark {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  border: 2px solid #DFE1E5;
+  padding: 6px;
+}
+#form .form-row .condition .row-item input {
+  position: absolute;
+  right: 40px;
+}
+#form .form-row .condition .row-item input:checked {
+  background: #42B358;
+}
+#form .form-row.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 45px;
 }
 
 #choice-connect {

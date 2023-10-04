@@ -31,36 +31,37 @@
                 <form id="form" action="">
                     <div class="form-row">
                         <label for="name">Nom</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" class="input" required>
                     </div>
                     <div class="form-row">
                         <label for="name">Prénom</label>
-                        <input type="text" id="surname" required>
+                        <input type="text" id="surname" class="input" required>
                     </div>
                     <div class="form-row">
                         <label for="name">Numéro de teléphone</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="input" required />
                     </div>
                     <div class="form-row">
                         <label for="email">Email</label>
-                        <input type="email" id="email" pattern=".+@globex\.com" required>
+                        <input type="email" id="email" pattern=".+@globex\.com" class="input" required>
                         <span class="required" disabled>Ce champ est requis</span>
                     </div>
                     <div class="form-row">
                         <label for="pwd"><span class="check"></span>Mot de Passe</label>
-                        <input type="password" id="pwd" minlength="8" required>
+                        <input type="password" id="pwd" class="input" minlength="8" required>
                         <span class="required">Ce champ est requis</span>
                     </div>
                     
                     <div class="form-row">
                         <label for="pwd"><span class="check"></span>Confirmation de Mot de Passe</label>
-                        <input type="password" id="pwd" minlength="8" required>
+                        <input type="password" id="pwd" minlength="8" class="input" required>
                     </div>
                     <!-- <div class="form-row chekbox-remember">
                         <input type="checkbox" id="remember" name="remember" checked>
                         <label for="remember" class="remember">Remember me for 14 days</label>
                     </div> -->
                     <div class="form-row">
+                        <label for="conditions">Acceptez les conditions générales</label>
                         <div class="condition">
                             <div class="row-item">
                                 <a class="item">Conditions générales de vente</a>
@@ -72,19 +73,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row button">
-                        <button type="submit" id="loginButton" class="button green arrow">S'inscrire</button>
+                    <!-- <div class="form-row">
+                        <label for="conditions">Acceptez les conditions générales</label>
+                        <div class="condition">
+                            <div class="row-item">
+                                <div class="item"> Conditions générales de vente
+                                    <input type="checkbox" id="check-valid" name="check-valid" class="check" checked>
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <div class="row-item">
+                                <div class="item"> Conditions générales d’utilisation
+                                    <input type="checkbox" id="check-valid" name="check-valid" class="check" checked>
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="form-row submit">
+                        <!-- <button type="submit" id="loginButton" class="button small-arrow green"></button> -->
+                        <a href="/pages/agent/complete-profile.html" class="button small-arrow green"></a>
                     </div>
                     
                 </form>
             </div>
-        </section>
-
-        <section id="register-form">
-
-        </section>
-
-        
+        </section>        
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

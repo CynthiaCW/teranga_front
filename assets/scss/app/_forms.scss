@@ -15,11 +15,15 @@
     }
 
     .form-row{
-        margin: 15px 0;
+        margin: 20px 0;
         display: flex;
         flex-direction: column;
 
-        input{
+        &:nth-child(7){
+            margin-top: 45px;
+        }
+
+        .input{
             appearance: none;
             border-radius: 16px;
             border: 2px solid $base-color4;
@@ -29,6 +33,38 @@
                 outline: none;
                 border: 2px solid $base-color8;
             }
+
+            // &.check{
+            //     position: absolute;
+            //     right: 40px;
+            //     width: 10px;
+            //     height: 10px;
+            //     padding: 6px;
+            //     border-radius: 5px;
+            //     border: 2px solid $base-color5;
+            //     cursor: pointer;
+
+            //     // &:focus{
+            //     //     position: absolute;
+            //     //     right: 40px;
+            //     //     width: 10px;
+            //     //     height: 10px;
+            //     //     background: $base-color8;
+                    
+
+            //     //     &::after{
+            //     //         content: "";
+            //     //         position: absolute;
+            //     //         width: 12px;
+            //     //         height: 8px;
+            //     //         top: 50%;
+            //     //         transform: translateY(-50%);
+            //     //         background: url("#{$images_dir}check.svg") no-repeat center;
+            //     //         background-size: cover;
+                        
+            //     //     }
+            //     // }
+            // }
         }
 
         label{
@@ -44,16 +80,85 @@
             padding: 20px 7px 23px 12px;
 
             .row-item{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:first-child{
+                    margin-bottom: 16px;
+                }
 
                 .item{
+                    display: block;
+                    position: relative;
                     font-size: 14px;
                     font-weight: 500;
                     color: $base-color2;
+                    padding-left: 28px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 24px;
+                        height: 24px;
+                        background: url("#{$images_dir}conditions.svg") no-repeat;
+                        background-size: cover;
+                    }
+
+                    input{
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+
+                    .checkmark{
+                        // position: absolute;
+                        // right: 0;
+                        // width: 10px;
+                        // height: 10px;
+                        // padding: 6px;
+                        // border-radius: 5px;
+                        // border: 2px solid $base-color5;
+                        // cursor: pointer;
+                        position: absolute;
+                        top: -1px;
+                        right: 0;
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 5px;
+                        border: 2px solid $base-color5;
+                        padding: 6px;
+                    }
+                }
+
+                input{
+                    position: absolute;
+                    right: 40px;
+
+                    &:checked{
+                        background: $base-color8;
+                    }
                 }
             }
+        }
+
+        &.submit{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+
+            margin-top: 45px;
         }
     }
 }
