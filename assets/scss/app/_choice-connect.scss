@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+#choice-connect{
+    background: url("#{$images_dir}background/soccer-field.png") no-repeat;
+    background-size: cover;
+    padding: 314px 0;
+
+
+    .cta-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-top: 170px;
+    }
+
+    .button{
+        padding: 15px 16px;
+        font-weight: 600;
+
+        &.trans{
+            padding-left: 0;
+        }
+
+        &.arrow{
+            padding-right: 40px;
+
+            span{
+                position: relative;
+    
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: -29px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 14px;
+                    background: url("#{$images_dir}arrow-right.svg") no-repeat center center;
+                    background-size: cover;
+                    
+                }
+            }
+        }
+        
+    }
+
+    #choice-hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start; 
+    }
+    
+    #slider{
+        // padding-bottom: 205px;
+
+        &.agent{
+            padding-bottom: 164px;
+        }
+
+        .slide-title{
+            max-width: 297px;
+            color: $base-color1;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            line-height: normal;
+            font-weight: 600;
+            margin-bottom: 27px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .slide{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .dots-contain{
+       
+            .dots-slider{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                gap: 16px;
+
+                .dot{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 10px;
+                    background: rgba(0, 0, 0, 0.51);
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    &.active{
+                        background: rgba(217, 217, 217, 0.60);
+                    }
+                    
+                }
+            }
+        }
+    }
+}

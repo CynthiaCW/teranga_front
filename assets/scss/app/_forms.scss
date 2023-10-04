@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+#form{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+    .required{
+        display: none;
+        
+        .active{
+            display: block;
+            color: $base-color6;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    .form-row{
+        margin: 15px 0;
+        display: flex;
+        flex-direction: column;
+
+        input{
+            appearance: none;
+            border-radius: 16px;
+            border: 2px solid $base-color4;
+            padding: 12px;
+
+            &:focus{
+                outline: none;
+                border: 2px solid $base-color8;
+            }
+        }
+
+        label{
+            margin-bottom: 10px;
+            color: $base-color3;
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+
+        .condition{
+            border-radius: 16px;
+            border: 2px solid $base-color4;
+            padding: 20px 7px 23px 12px;
+
+            .row-item{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+
+                .item{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $base-color2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teranga Football Pro</title>
+    <link rel="stylesheet" href="/../public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <section id="register">
+        <section id="register-hero" class="section">
+            <div class="inside">
+                <div class="btn-close">
+                    <div class="close">
+                        <a href="/pages/agent/choice-connect.html" class="close-window"></a>
+                    </div>
+                </div>
+                
+                <div class="hero-content">
+                    <h1 class="section-title">S’inscrire</h1>
+                    <span class="sub-title">Veuillez rentrer vos informations personnelles pour vous inscrire</span>
+                </div>
+            </div>
+        </section>
+        <section id="form-content" class="section">
+            <div class="inside">
+
+                <form id="form" action="">
+                    <div class="form-row">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="name">Prénom</label>
+                        <input type="text" id="surname" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="name">Numéro de teléphone</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" pattern=".+@globex\.com" required>
+                        <span class="required" disabled>Ce champ est requis</span>
+                    </div>
+                    <div class="form-row">
+                        <label for="pwd"><span class="check"></span>Mot de Passe</label>
+                        <input type="password" id="pwd" minlength="8" required>
+                        <span class="required">Ce champ est requis</span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="pwd"><span class="check"></span>Confirmation de Mot de Passe</label>
+                        <input type="password" id="pwd" minlength="8" required>
+                    </div>
+                    <!-- <div class="form-row chekbox-remember">
+                        <input type="checkbox" id="remember" name="remember" checked>
+                        <label for="remember" class="remember">Remember me for 14 days</label>
+                    </div> -->
+                    <div class="form-row">
+                        <div class="condition">
+                            <div class="row-item">
+                                <a class="item">Conditions générales de vente</a>
+                                <input type="checkbox" id="check-valid" name="check-valid" class="check" checked />
+                            </div>
+                            <div class="row-item">
+                                <a class="item">Conditions générales d’utilisation</a>
+                                <input type="checkbox" id="check-valid" name="check-valid" class="check" checked />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row button">
+                        <button type="submit" id="loginButton" class="button green arrow">S'inscrire</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+
+        <section id="register-form">
+
+        </section>
+
+        
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/app/_slick.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>

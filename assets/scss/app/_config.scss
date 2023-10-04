@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+$images_dir: "/public/images/";
+
+
+
+/* BREAKPOINTS */
+
+$desktop-large:    1920;
+$desktop-medium:   1440;
+$desktop-small:    1280;
+$tablet-landscape: 1024;
+$tablet-portrait:  768;
+$mobile-landscape: 640;
+$mobile-portrait:  420;
+$small-mobile-portrait: 375px;
+
+/* COLORS */
+
+$base-color1: #ffffff;
+$base-color2: #515151; 
+$base-color3: #8B92A2;
+$base-color4: #C2C7CF;
+$base-color5: #DFE1E5;
+$base-color6: #F94545;
+$base-color7: #FFDE68;
+$base-color8: #42B358;
+
+// Background 
+$base-color9: #FAFBFC; 
+
+/* FONTS */
+
+// Montserrat - Content
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+// Poppins - Title
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+

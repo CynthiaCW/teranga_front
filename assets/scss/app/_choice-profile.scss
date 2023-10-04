@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+#choice-profil{
+    background: url("#{$images_dir}background/soccer-field.png") no-repeat;
+    background-size: cover;
+    padding: 313px 0;
+
+    #choice-hero{
+        .title-choice{
+            max-width: 187px;
+            font-family: Poppins;
+            font-size: 35px;
+            font-weight: 600;
+            line-height: normal;
+            color: $base-color1;
+            margin-bottom: 58px;
+        }
+
+        .cta-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .button{
+                color: $base-color1;
+                font-family: Montserrat;
+                font-weight: 600;
+                border-radius: 16px;
+                
+
+                &.soccer{
+                    background: $base-color8;
+                    margin: 0 0 46px;
+                    
+                    span{
+                        position: relative;
+                        padding: 0 10px;
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: -30px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 24px;
+                            height: 25px;
+                            background: url("#{$images_dir}icon-soccer.svg") no-repeat center center;
+                            background-size: cover;
+                        }
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            right: -30px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                            height: 14px;
+                            background: url("#{$images_dir}arrow-right.svg") no-repeat center center;
+                            background-size: cover;
+                        }
+                    }
+
+                    &:hover{
+                        background: $base-color9;
+                        transition: all 600ms ease;
+                    }
+                    
+                }
+
+                &.agent{
+                    background: $base-color6;
+                    margin: 0 0 46px;
+                    
+                    span{
+                        position: relative;
+                        padding: 0 10px;
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: -30px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 24px;
+                            height: 25px;
+                            background: url("#{$images_dir}icon-agent.svg") no-repeat center center;
+                            background-size: cover;
+                        }
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            right: -30px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                            height: 14px;
+                            background: url("#{$images_dir}arrow-right.svg") no-repeat center center;
+                            background-size: cover;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    
+
+}

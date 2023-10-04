@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "compile": "sass ./assets/scss/app.scss:./public/css/style.css --watch"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "sass": "^1.68.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
